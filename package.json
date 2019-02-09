@@ -10,6 +10,8 @@
   "author": "kanziw <kanziwoong@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint src/**",
+    "prebuild": "npm run lint",
     "build": "babel src -d dist",
     "dev": "cd src && nodemon --exec babel-node index.js",
     "start": "node dist/index.js"
@@ -26,6 +28,11 @@
     "@types/express": "^4.16.1",
     "@types/jest": "^24.0.0",
     "@types/morgan": "^1.7.35",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9"
   }
