@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/kanziw/project-generator-node"
   },
-  "author": "kanziw <kanziwoong@gmail.com>",
+  "author": "{{githubProfileOrOrganizationName}} <{{email}}>",
   "license": "MIT",
   "scripts": {
     "postinstall": "node generator/postInstall.js",

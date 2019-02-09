@@ -1,1 +1,1 @@
-# Project generator for Node.js
+# {{projectName}}
