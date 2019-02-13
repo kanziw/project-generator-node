@@ -10,10 +10,13 @@
   "author": "{{githubProfileOrOrganizationName}} <{{email}}>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "node generator/postInstall.js",
+    "postinstall": "node ./generator/postInstall.js",
+    "lint": "eslint src/**",
+    "prebuild": "npm run lint && rm -rf dist",
     "build": "babel src -d dist",
     "dev": "cd src && nodemon --exec babel-node index.js",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -29,8 +32,16 @@
     "@types/jest": "^24.0.0",
     "@types/morgan": "^1.7.35",
     "@types/shelljs": "^0.8.2",
+    "@types/supertest": "^2.0.7",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "supertest": "^3.4.2"
   }
 }
