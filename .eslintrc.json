@@ -1,12 +1,35 @@
 {
-  "extends": "airbnb",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+  "extends": [
+    "airbnb",
+    "plugin:jest/recommended"
+  ],
+  "env": {
+    "jest/globals": true
   },
+  "plugins": [
+    "jest"
+  ],
   "rules": {
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "computed-property-spacing": [
+      "error",
+      "always"
+    ],
     "import/prefer-default-export": "off",
+    "no-confusing-arrow": "off",
     "no-console": "off",
-    "semi": "off"
+    "no-process-env": "off",
+    "object-curly-newline": "off",
+    "semi": [
+      "error",
+      "never"
+    ]
   }
 }

@@ -12,3 +12,4 @@ const startServer = port => app.listen(port, () => {
 })
 
 export { startServer }
+export default app
